@@ -55,3 +55,47 @@ namespace ConsoleApp1
 
     }
 }
+
+//wap to perform function overloading to swap two integer number and two float number using call by ref
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        void swap(ref int num1,ref int num2)
+        {
+            int t;
+            t = num1;
+            num1 = num2;
+            num2 = t;
+        }
+
+        void swap(ref float num3,ref float num4)
+        {
+            float temp;
+            temp = num3;
+            num3 = num4;
+            num4 = temp;
+        }
+      
+        static void Main(string[] args)
+        {
+            Program s = new Program();
+            int num1 = 1;
+            int num2 = 2;
+            float num3 = 2.3f;
+            float num4 = 6.7f;
+            Console.WriteLine("Integer before swapping");
+            Console.WriteLine("num1= " + num1 + " num2= " + num2);
+            s.swap(ref num1,ref num2);
+            Console.WriteLine("Integer after swapping");
+            Console.WriteLine("num1= " + num1 + " num2= " + num2);
+            Console.WriteLine("Float before swapping");
+            Console.WriteLine("num3= " + num3 + " num4= " + num4);
+            s.swap(ref num3, ref num4);
+            Console.WriteLine("Float after swapping");
+            Console.WriteLine("num3= " + num3 + " num4= " + num4);
+        }
+    }
+}
