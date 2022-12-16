@@ -1,0 +1,43 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class book
+    {
+        String b_name;
+        String a_name;
+        String price;
+
+        void getdata()
+        {
+            Console.WriteLine("Enter book name:");
+            b_name= Console.ReadLine();
+            Console.WriteLine("Enter author name");
+            a_name= Console.ReadLine();
+            Console.WriteLine("Enter price of book");
+            price= Console.ReadLine();
+        }
+        void printdata()
+        {
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Name of book: "+b_name);
+            Console.WriteLine("Author of book: "+a_name);
+            Console.WriteLine("Price of book: "+price);
+            Console.WriteLine("----------------------------------");
+        }
+        static void Main(string[] args)
+        { 
+           book[] b = new book[5];
+            for (int i=0;i<5;i++)
+            {
+                b[i] = new book();
+                b[i].getdata();             
+            }
+            for (int i = 0; i <5; i++)
+            {                    
+                b[i].printdata();
+            }
+
+        }
+    }
+}
