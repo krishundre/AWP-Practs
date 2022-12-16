@@ -1,0 +1,57 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the number of rows for pattern");
+            int rows = int.Parse(Console.ReadLine());
+            int num = 1;
+            for (int i = 1; i <= rows; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(num+" ");
+                    num++;
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Pattern 2");
+            Console.WriteLine("Enter the number of rows for pattern");
+            int rows1 = int.Parse(Console.ReadLine());
+            for (int i = 0; i <= rows1; i++)
+            {
+                for (int j = 0; j <= i; j++)
+                {
+                    if (j % 2 == 0)
+                    {
+                        Console.Write("1 ");
+                    }
+                    else
+                    {
+                        Console.Write("0 ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Pattern 3");
+            Console.WriteLine("Enter the number of rows for pattern");
+            int rows2 = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= rows2; i++)
+            {
+                for(int k=rows2;k>i-1;k--)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+    }
+}
